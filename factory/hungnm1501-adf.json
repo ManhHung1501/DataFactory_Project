@@ -1,0 +1,9 @@
+{
+	"name": "hungnm1501-adf",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ea61de42-319a-40d2-ac95-0a5d442c44e5",
+		"tenantId": "e6cb8ced-1b57-4e45-bfd7-5ae153b5bc87"
+	}
+}
