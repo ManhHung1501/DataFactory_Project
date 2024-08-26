@@ -3,246 +3,6 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Ingest Circuits File",
-				"type": "DatabricksNotebook",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"notebookPath": "/Users/hungnm15012002@gmail.com/Databricks_project/ingestion/1.Ingest_circuits_file",
-					"baseParameters": {
-						"p_data_source": {
-							"value": "@variables('v_data_source')",
-							"type": "Expression"
-						},
-						"p_file_date": {
-							"value": "@formatDateTime(pipeline().parameters.p_window_end_date, 'yyyy-MM-dd')",
-							"type": "Expression"
-						}
-					}
-				},
-				"linkedServiceName": {
-					"referenceName": "ls_databricks_course_ws",
-					"type": "LinkedServiceReference"
-				}
-			},
-			{
-				"name": "Ingest Constructors File",
-				"type": "DatabricksNotebook",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"notebookPath": "/Users/hungnm15012002@gmail.com/Databricks_project/ingestion/3.Ingest_constructors_file",
-					"baseParameters": {
-						"p_data_source": {
-							"value": "@variables('v_data_source')",
-							"type": "Expression"
-						},
-						"p_file_date": {
-							"value": "@formatDateTime(pipeline().parameters.p_window_end_date, 'yyyy-MM-dd')",
-							"type": "Expression"
-						}
-					}
-				},
-				"linkedServiceName": {
-					"referenceName": "ls_databricks_course_ws",
-					"type": "LinkedServiceReference"
-				}
-			},
-			{
-				"name": "Ingest Races File",
-				"type": "DatabricksNotebook",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"notebookPath": "/Users/hungnm15012002@gmail.com/Databricks_project/ingestion/2.Ingest_race_file",
-					"baseParameters": {
-						"p_data_source": {
-							"value": "@variables('v_data_source')",
-							"type": "Expression"
-						},
-						"p_file_date": {
-							"value": "@formatDateTime(pipeline().parameters.p_window_end_date, 'yyyy-MM-dd')",
-							"type": "Expression"
-						}
-					}
-				},
-				"linkedServiceName": {
-					"referenceName": "ls_databricks_course_ws",
-					"type": "LinkedServiceReference"
-				}
-			},
-			{
-				"name": "Ingest Drivers File",
-				"type": "DatabricksNotebook",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"notebookPath": "/Users/hungnm15012002@gmail.com/Databricks_project/ingestion/4.Ingest_drivers_file",
-					"baseParameters": {
-						"p_data_source": {
-							"value": "@variables('v_data_source')",
-							"type": "Expression"
-						},
-						"p_file_date": {
-							"value": "@formatDateTime(pipeline().parameters.p_window_end_date, 'yyyy-MM-dd')",
-							"type": "Expression"
-						}
-					}
-				},
-				"linkedServiceName": {
-					"referenceName": "ls_databricks_course_ws",
-					"type": "LinkedServiceReference"
-				}
-			},
-			{
-				"name": "Ingest Results File",
-				"type": "DatabricksNotebook",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"notebookPath": "/Users/hungnm15012002@gmail.com/Databricks_project/ingestion/5.Ingest_results_file",
-					"baseParameters": {
-						"p_data_source": {
-							"value": "@variables('v_data_source')",
-							"type": "Expression"
-						},
-						"p_file_date": {
-							"value": "@formatDateTime(pipeline().parameters.p_window_end_date, 'yyyy-MM-dd')",
-							"type": "Expression"
-						}
-					}
-				},
-				"linkedServiceName": {
-					"referenceName": "ls_databricks_course_ws",
-					"type": "LinkedServiceReference"
-				}
-			},
-			{
-				"name": "Ingest Pit Stops File",
-				"type": "DatabricksNotebook",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"notebookPath": "/Users/hungnm15012002@gmail.com/Databricks_project/ingestion/6.Ingest_pitstops_file",
-					"baseParameters": {
-						"p_data_source": {
-							"value": "@variables('v_data_source')",
-							"type": "Expression"
-						},
-						"p_file_date": {
-							"value": "@formatDateTime(pipeline().parameters.p_window_end_date, 'yyyy-MM-dd')",
-							"type": "Expression"
-						}
-					}
-				},
-				"linkedServiceName": {
-					"referenceName": "ls_databricks_course_ws",
-					"type": "LinkedServiceReference"
-				}
-			},
-			{
-				"name": "Ingest Lap Times File",
-				"type": "DatabricksNotebook",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"notebookPath": "/Users/hungnm15012002@gmail.com/Databricks_project/ingestion/7.Ingest_lap_times_folder",
-					"baseParameters": {
-						"p_data_source": {
-							"value": "@variables('v_data_source')",
-							"type": "Expression"
-						},
-						"p_file_date": {
-							"value": "@formatDateTime(pipeline().parameters.p_window_end_date, 'yyyy-MM-dd')",
-							"type": "Expression"
-						}
-					}
-				},
-				"linkedServiceName": {
-					"referenceName": "ls_databricks_course_ws",
-					"type": "LinkedServiceReference"
-				}
-			},
-			{
-				"name": "Ingest Qualifying File",
-				"type": "DatabricksNotebook",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"notebookPath": "/Users/hungnm15012002@gmail.com/Databricks_project/ingestion/8.Ingest_qualifying_folder",
-					"baseParameters": {
-						"p_data_source": {
-							"value": "@variables('v_data_source')",
-							"type": "Expression"
-						},
-						"p_file_date": {
-							"value": "@formatDateTime(pipeline().parameters.p_window_end_date, 'yyyy-MM-dd')",
-							"type": "Expression"
-						}
-					}
-				},
-				"linkedServiceName": {
-					"referenceName": "ls_databricks_course_ws",
-					"type": "LinkedServiceReference"
-				}
-			},
-			{
 				"name": "Get Folder Details",
 				"type": "GetMetadata",
 				"dependsOn": [],
@@ -296,7 +56,7 @@
 					},
 					"ifTrueActivities": [
 						{
-							"name": "Ingest Circuits File_copy1",
+							"name": "Ingest Circuits File",
 							"type": "DatabricksNotebook",
 							"dependsOn": [],
 							"policy": {
@@ -326,7 +86,7 @@
 							}
 						},
 						{
-							"name": "Ingest Constructors File_copy1",
+							"name": "Ingest Constructors File",
 							"type": "DatabricksNotebook",
 							"dependsOn": [],
 							"policy": {
@@ -356,7 +116,7 @@
 							}
 						},
 						{
-							"name": "Ingest Races File_copy1",
+							"name": "Ingest Races File",
 							"type": "DatabricksNotebook",
 							"dependsOn": [],
 							"policy": {
@@ -386,7 +146,7 @@
 							}
 						},
 						{
-							"name": "Ingest Drivers File_copy1",
+							"name": "Ingest Drivers File",
 							"type": "DatabricksNotebook",
 							"dependsOn": [],
 							"policy": {
@@ -416,7 +176,7 @@
 							}
 						},
 						{
-							"name": "Ingest Results File_copy1",
+							"name": "Ingest Results File",
 							"type": "DatabricksNotebook",
 							"dependsOn": [],
 							"policy": {
@@ -446,7 +206,7 @@
 							}
 						},
 						{
-							"name": "Ingest Pit Stops File_copy1",
+							"name": "Ingest Pit Stops File",
 							"type": "DatabricksNotebook",
 							"dependsOn": [],
 							"policy": {
@@ -476,7 +236,7 @@
 							}
 						},
 						{
-							"name": "Ingest Lap Times File_copy1",
+							"name": "Ingest Lap Times File",
 							"type": "DatabricksNotebook",
 							"dependsOn": [],
 							"policy": {
@@ -506,7 +266,7 @@
 							}
 						},
 						{
-							"name": "Ingest Qualifying File_copy1",
+							"name": "Ingest Qualifying File",
 							"type": "DatabricksNotebook",
 							"dependsOn": [],
 							"policy": {
