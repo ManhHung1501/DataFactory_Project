@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "hungnm1501-adf"
+		},
+		"ls_databricks_course_ws_properties_typeProperties_existingClusterId": {
+			"value": "0801-033423-yfn3nlj9"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
