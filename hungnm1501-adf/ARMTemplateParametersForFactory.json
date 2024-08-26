@@ -5,8 +5,17 @@
 		"factoryName": {
 			"value": "hungnm1501-adf"
 		},
+		"ls_formula1_storage_accountKey": {
+			"value": ""
+		},
 		"ls_databricks_course_ws_properties_typeProperties_existingClusterId": {
 			"value": "0801-033423-yfn3nlj9"
+		},
+		"ls_formula1_storage_properties_typeProperties_url": {
+			"value": "https://hung1501dl.dfs.core.windows.net/"
+		},
+		"tr_process_formula1_data_properties_pipeline_parameters_p_window_end_date": {
+			"value": "@trigger().outputs.windowEndTime"
 		}
 	}
 }
